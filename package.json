@@ -1,6 +1,6 @@
 {
       "name":           "ee-project"
-    , "description":    "project vars like aop root, config.js loader etc"
+    , "description":    "determines the projects root path, loads a config.js if present, exports them"
     , "version":        "0.1.0"
     , "homepage":       "https://github.com/eventEmitter/ee-project"
     , "author":         "Michael van der Weg <michael@eventemitter.com> (http://eventemitter.com/)" 
