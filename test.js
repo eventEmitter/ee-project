@@ -8,3 +8,9 @@
 
 	assert.ok( project.root && project.root.length > 0, "failed to detect project root!" );
 	assert.ok( project.config && project.config.test, "filed to load the project config!" );
+
+
+	project.getGITRevision( function( err, revision ){
+		console.log( err );
+		console.log( revision );
+	}.bind( this ) );
