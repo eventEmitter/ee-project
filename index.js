@@ -1,9 +1,10 @@
-	
+
 	var   fs 			= require( "fs" )
 		, childProcess 	= require( "child_process" )
-		, file 			= process.argv[ 1 ].indexOf( ".js" ) >= 0 ? process.argv[ 1 ] : process.argv[ 1 ] + ".js"
+		, file 			= fs.existsSync( process.argv[ 1 ].indexOf( ".js" ) >= 0 ? process.argv[ 1 ] : process.argv[ 1 ] + ".js" ) ?  process.argv[ 1 ] + ".js" :  process.argv[ 1 ]
 		, isDir 		= fs.existsSync( file ) && fs.statSync( file ).isDirectory()
 		, path 			= ( isDir ? file : file.substr( 0, process.argv[ 1 ].lastIndexOf( "/" ) ) ) + "/";
+
 
 
 	var Class = require( "ee-class" );
