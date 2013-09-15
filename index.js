@@ -1,8 +1,9 @@
 	
 	var   fs 			= require( "fs" )
 		, childProcess 	= require( "child_process" )
-		, isDir 		= fs.existsSync( process.argv[ 1 ] ) && fs.statSync( process.argv[ 1 ] ).isDirectory()
-		, path 			= ( isDir ? process.argv[ 1 ] : process.argv[ 1 ].substr( 0, process.argv[ 1 ].lastIndexOf( "/" ) ) ) + "/";
+		, file 			= process.argv[ 1 ].indexOf( ".js" ) >= 0 ? process.argv[ 1 ] : process.argv[ 1 ] + ".js"
+		, isDir 		= fs.existsSync( file ) && fs.statSync( file ).isDirectory()
+		, path 			= ( isDir ? file : file.substr( 0, process.argv[ 1 ].lastIndexOf( "/" ) ) ) + "/";
 
 
 	module.exports = {

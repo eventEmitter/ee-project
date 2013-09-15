@@ -1,8 +1,9 @@
 {
       "name":           "ee-project"
     , "description":    "determines the projects root path, loads a config.js if present, exports them"
-    , "version":        "0.1.2"
+    , "version":        "0.1.3"
     , "homepage":       "https://github.com/eventEmitter/ee-project"
+    , "licence":        "MIT"
     , "author":         "Michael van der Weg <michael@eventemitter.com> (http://eventemitter.com/)" 
     , "repository": {
         "url":          "https://github.com/eventEmitter/ee-project"
