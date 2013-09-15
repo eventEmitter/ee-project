@@ -14,3 +14,6 @@
 		console.log( err );
 		console.log( revision );
 	}.bind( this ) );
+
+
+	console.log( project.root );

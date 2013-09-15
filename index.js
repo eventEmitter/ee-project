@@ -6,9 +6,12 @@
 		, path 			= ( isDir ? file : file.substr( 0, process.argv[ 1 ].lastIndexOf( "/" ) ) ) + "/";
 
 
-	module.exports = {
-		  root: 			path
-		, config: 			fs.existsSync( path + "config.js" ) ? require( path + "config.js" ) : {}
+	var Class = require( "ee-class" );
+
+	module.exports = new ( new Class( {
+		  root: 	path
+		, config: 	fs.existsSync( path + "config.js" ) ? require( path + "config.js" ) : {}
+
 		, getGITRevision: function( callback ){
 			childProcess.exec( "cd "+path+" && git rev-parse HEAD", function( err, stdout, stderr ){
 				if ( err ) callback( err );
@@ -16,4 +19,4 @@
 				else callback ( null, stdout.trim() );
 			}.bind( this ) );
 		}
-	};
+	} ) )();
