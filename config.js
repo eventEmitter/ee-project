@@ -1,5 +1,6 @@
 
 
 	module.exports = {
-		test: true
+		  test:   	true
+		, passing: 	'test'
 	};

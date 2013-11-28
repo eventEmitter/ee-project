@@ -1,21 +1,31 @@
 {
-      "name":           "ee-project"
-    , "description":    "determines the projects root path, loads a config.js if present, exports them"
-    , "version":        "0.1.6"
-    , "homepage":       "https://github.com/eventEmitter/ee-project"
-    , "licence":        "MIT"
-    , "os":             "linux"
-    , "author":         "Michael van der Weg <michael@eventemitter.com> (http://eventemitter.com/)" 
+      "name"                        : "ee-project"
+    , "description"                 : "Loads config.js files in the project roo directory, provides infos about git"
+    , "version"                     : "0.2.0"
+    , "homepage"                    : "https://github.com/eventEmitter/ee-project"
+    , "author"                      : "Michael van der Weg <michael@eventemitter.com> (http://eventemitter.com/)" 
+    , "licence"                     : "mit"
+    , "os"                          : "!win"
     , "repository": {
-        "url":          "https://github.com/eventEmitter/ee-project"
+          "url"                     : "https://github.com/eventEmitter/ee-project.git"
+        , "type"                    : "git"
     }
     , "engines": {
-        "node":         "*"
+        "node"                      : ">=v0.10.17"
     }
     , "bugs": {
-        "url":          "https://github.com/eventEmitter/ee-project/issues"
+        "url"                       : "https://github.com/eventEmitter/ee-project/issues"
     }
-    , "dependencies": {}
-    , "devDependencies": {}
+    , "dependencies": {
+          "ee-class"                : "*"
+        , "ee-log"                  : "*"
+    }
+    , "devDependencies": {
+          "mocha"                   : "*"
+    }
     , "optionalDependencies": {}
+    , "keywords"                    : ["config", "project", "git"]
+    , "scripts": {
+        "test"                      : "./node_modules/mocha/bin/mocha --reporter spec"
+    }
 }
