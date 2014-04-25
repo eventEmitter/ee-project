@@ -1,7 +1,7 @@
 {
       "name"                        : "ee-project"
     , "description"                 : "Loads config.js files in the project roo directory, provides infos about git"
-    , "version"                     : "0.2.2"
+    , "version"                     : "0.2.3"
     , "homepage"                    : "https://github.com/eventEmitter/ee-project"
     , "author"                      : "Michael van der Weg <michael@eventemitter.com> (http://eventemitter.com/)" 
     , "licence"                     : "mit"
@@ -17,8 +17,8 @@
         "url"                       : "https://github.com/eventEmitter/ee-project/issues"
     }
     , "dependencies": {
-          "ee-class"                : "*"
-        , "ee-log"                  : "*"
+          "ee-class"                : "0.4.x"
+        , "ee-log"                  : "0.2.x"
     }
     , "devDependencies": {
           "mocha"                   : "*"
