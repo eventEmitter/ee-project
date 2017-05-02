@@ -1,5 +1,7 @@
 # ee-project
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/eventEmitter/ee-project.svg)](https://greenkeeper.io/)
+
 Loads config.js files in the project roo directory, provides infos about git
 
 ## installation
